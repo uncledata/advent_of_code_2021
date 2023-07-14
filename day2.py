@@ -1,10 +1,7 @@
 import os
 from typing import List
-import numpy as np
+from utils.advent_of_code_utils import get_list_input
 
-def get_input(file_name: str) -> List:
-    with open(file_name, 'r') as f:
-        return f.readlines()
 
 def solution(list_of_dirs: List, part)->int:
     horizontal = 0
@@ -30,8 +27,8 @@ def solution(list_of_dirs: List, part)->int:
     return horizontal*vertical
         
 def main():
-    file_name=f'{os.getcwd()}/day2/input.txt'
-    lines = get_input(file_name)
+    file_name=f'{os.getcwd()}/inputs/input_d2.txt'
+    lines = get_list_input(file_name)
     
     print(solution(lines,1))
     print(solution(lines,2))
