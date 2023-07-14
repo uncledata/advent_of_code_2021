@@ -1,10 +1,7 @@
 import os
 from typing import List
 import numpy as np
-
-def get_input(file_name: str) -> List:
-    with open(file_name, 'r') as f:
-        return f.readlines()
+from utils.advent_of_code_utils import get_list_input
 
 def solution(list_of_ints:List, length:int)-> int:
     cnt = 0
@@ -15,8 +12,8 @@ def solution(list_of_ints:List, length:int)-> int:
     return cnt
 
 def main():
-    file_name=f'{os.getcwd()}/day1/input.txt'
-    lines = get_input(file_name)
+    file_name=f'{os.getcwd()}/inputs/input_d1.txt'
+    lines = get_list_input(file_name)
     
     list_of_ints = [int(a) for a in lines]
     
